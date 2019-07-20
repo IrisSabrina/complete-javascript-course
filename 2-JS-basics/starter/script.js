@@ -6,7 +6,7 @@
 //
 // // a VARIABLE is a container to store a value
 //
-// let firstName = 'John'; // The variable name here is firstName and the VALUE assigned to it is John
+// let firstName = 'John'; // The VARIABLE name here is firstName and the VALUE assigned to it is John
 //
 // console.log(firstName); // returns John
 //
@@ -15,13 +15,13 @@
 // console.log(lastName);
 // console.log(age);
 //
-// let fullAge = true;  // This is a Boolean which can only be true or false
+// let fullAge = true;  // This is a BOOLEAN which can only be true or false
 // console.log(fullAge); // Returns true
 //
-// let job; // we declared a variable, but did not assign a value
+// let job; // we declared a VARIABLE, but did not assign a VALUE
 // console.log(job); // returns undefined
 //
-// job = 'Teacher'; // value has been assigned
+// job = 'Teacher'; // VALUE has been assigned
 // console.log(job); // returns Teacher
 
 /////////////////////
@@ -34,7 +34,7 @@
 // console.log(firstName + ' ' + age); // JavaScript automatically adds the name and age together in the process of type coercion
 //
 // let job, isMarried; // declaring multiple variables on the same line
-// job = 'teacher'; // here now assigned values
+// job = 'teacher'; // here now assigned VALUES
 // isMarried = false;
 //
 // console.log(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMarried);
@@ -73,9 +73,9 @@
 //
 // // typeof Operator
 //
-// console.log(typeof johnOlder); // returns Boolean
+// console.log(typeof johnOlder); // returns BOOLEAN
 // console.log(typeof ageJohn); // returns number
-// console.log(typeof 'Mark is older than John'); // returns string
+// console.log(typeof 'Mark is older than John'); // returns STRING
 // let x;
 // console.log(typeof x); // returns undefined
 
