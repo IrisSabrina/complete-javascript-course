@@ -82,32 +82,54 @@
 /////////////////////
 // Operator Precedence
 /////////////////////
+//
+// let now = 2018;
+// let yearJohn = 1989;
+// let fullAge = 18;
+//
+// let isFullAge = now - yearJohn >= fullAge; // asks if John's age (yearJohn) is greater than or equal to the fullAge. The precendence is that the subtraction takes place BEFORE the greater than or equal to so that the comparison may take place
+// console.log(isFullAge); // returns true
+//
+// let ageJohn = now - yearJohn;
+// let ageMark = 35;
+// let average = (ageJohn + ageMark) / 2;
+// console.log(average);
+//
+// // Multiple assignments
+// let x, y;
+// x = y = (3 + 5) * 4 - 6; // Steps: 8 * 4 - 6 // 32 - 6 // 26
+// // this works because = works right to left. so 26 is assigned to y which is then assigned to x
+// console.log(x, y); // returns 26 26
+//
+// // More Operators
+// // x = x * 2;
+// x *= 2; // this line will do the same thing as the above line with less code
+// console.log(x); // returns 52
+// x += 10; // <- equals -> x = x + 10
+// console.log(x); // returns 62
+// // x = x + 1;
+// // x += 1;
+// x++ // This will increment x by 1 the same as the two above lines.
+// console.log(x);
 
-let now = 2018;
-let yearJohn = 1989;
-let fullAge = 18;
+/////////////////////
+// CODING CHALLENGE
+/////////////////////
 
-let isFullAge = now - yearJohn >= fullAge; // asks if John's age (yearJohn) is greater than or equal to the fullAge. The precendence is that the subtraction takes place BEFORE the greater than or equal to so that the comparison may take place
-console.log(isFullAge); // returns true
+let markHeight = 1.9;
 
-let ageJohn = now - yearJohn;
-let ageMark = 35;
-let average = (ageJohn + ageMark) / 2;
-console.log(average);
+let markMass = 75;
 
-// Multiple assignments
-let x, y;
-x = y = (3 + 5) * 4 - 6; // Steps: 8 * 4 - 6 // 32 - 6 // 26
-// this works because = works right to left. so 26 is assigned to y which is then assigned to x
-console.log(x, y); // returns 26 26
+let johnHeight = 1.8;
 
-// More Operators
-// x = x * 2;
-x *= 2; // this line will do the same thing as the above line with less code
-console.log(x); // returns 52
-x += 10; // <- equals -> x = x + 10
-console.log(x); // returns 62
-// x = x + 1;
-// x += 1;
-x++ // This will increment x by 1 the same as the two above lines.
-console.log(x);
+let johnMass = 63;
+
+let markBMI = markMass / markHeight^2
+let johnBMI = johnMass / johnHeight^2
+
+console.log(markBMI); // returned 33
+console.log(johnBMI);
+
+let higherBMI = markBMI > johnBMI
+
+console.log('Is Mark\'s BMI highter than John\'s? ' + higherBMI);
