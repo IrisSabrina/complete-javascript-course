@@ -115,7 +115,50 @@
 /////////////////////
 // CODING CHALLENGE
 /////////////////////
+//
+// let markHeight = 1.9;
+//
+// let markMass = 75;
+//
+// let johnHeight = 1.8;
+//
+// let johnMass = 63;
+//
+// let markBMI = markMass / markHeight^2
+// let johnBMI = johnMass / johnHeight^2
+//
+// console.log(markBMI); // returned 33
+// console.log(johnBMI);
+//
+// let higherBMI = markBMI > johnBMI
+//
+// console.log('Is Mark\'s BMI highter than John\'s? ' + higherBMI);
 
+/////////////////////
+// SECTION 2: JS Language Basics
+/////////////////////
+
+// if statements
+
+let firstName = 'John';
+let civilStatus = 'single';
+
+if (civilStatus === 'married') {
+  console.log(firstName + ' is married!');
+} else {
+  console.log(firstName + ' will hopefully marry soon.');
+}// This will return true if the civilStatus is married and false if it's not
+
+let isMarried = true; // this creates a Boolean true/false statement that we can plug in to the if statement
+
+if (isMarried) {
+  console.log(firstName + ' is married!');
+} else {
+  console.log(firstName + ' will hopefully marry soon.');
+} // returned John is married!
+
+
+// rewriting the previous coding challenge answer with an if statement to confirm who has the higher BMI
 let markHeight = 1.9;
 
 let markMass = 75;
@@ -127,9 +170,8 @@ let johnMass = 63;
 let markBMI = markMass / markHeight^2
 let johnBMI = johnMass / johnHeight^2
 
-console.log(markBMI); // returned 33
-console.log(johnBMI);
-
-let higherBMI = markBMI > johnBMI
-
-console.log('Is Mark\'s BMI highter than John\'s? ' + higherBMI);
+if (markBMI > johnBMI) {
+  console.log('Mark\'s BMI is higher than John\'s');
+} else {
+  console.log('John\'s BMI is higher than Mark\'s');
+}
