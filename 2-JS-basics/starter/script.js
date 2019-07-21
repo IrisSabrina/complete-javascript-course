@@ -139,39 +139,56 @@
 /////////////////////
 
 // if statements
+//
+// let firstName = 'John';
+// let civilStatus = 'single';
+//
+// if (civilStatus === 'married') {
+//   console.log(firstName + ' is married!');
+// } else {
+//   console.log(firstName + ' will hopefully marry soon.');
+// }// This will return true if the civilStatus is married and false if it's not
+//
+// let isMarried = true; // this creates a Boolean true/false statement that we can plug in to the if statement
+//
+// if (isMarried) {
+//   console.log(firstName + ' is married!');
+// } else {
+//   console.log(firstName + ' will hopefully marry soon.');
+// } // returned John is married!
+//
+//
+// // rewriting the previous coding challenge answer with an if statement to confirm who has the higher BMI
+// let markHeight = 1.9;
+//
+// let markMass = 75;
+//
+// let johnHeight = 1.8;
+//
+// let johnMass = 63;
+//
+// let markBMI = markMass / markHeight^2
+// let johnBMI = johnMass / johnHeight^2
+//
+// if (markBMI > johnBMI) {
+//   console.log('Mark\'s BMI is higher than John\'s');
+// } else {
+//   console.log('John\'s BMI is higher than Mark\'s');
+// };
+
+/////////////////////
+// BOOLEAN LOGIC
+/////////////////////
 
 let firstName = 'John';
-let civilStatus = 'single';
+let age = 20;
 
-if (civilStatus === 'married') {
-  console.log(firstName + ' is married!');
+if (age < 13) {
+  console.log(firstName + ' is a boy.');
+} else if (age >= 13 && age < 20) { // Between 13 and 20 -- age >= 13 and age <20
+  console.log(firstName + ' is a teenager.');
+} else if (age >= 20 && age < 30) {
+  console.log(firstName + ' is a young man.');
 } else {
-  console.log(firstName + ' will hopefully marry soon.');
-}// This will return true if the civilStatus is married and false if it's not
-
-let isMarried = true; // this creates a Boolean true/false statement that we can plug in to the if statement
-
-if (isMarried) {
-  console.log(firstName + ' is married!');
-} else {
-  console.log(firstName + ' will hopefully marry soon.');
-} // returned John is married!
-
-
-// rewriting the previous coding challenge answer with an if statement to confirm who has the higher BMI
-let markHeight = 1.9;
-
-let markMass = 75;
-
-let johnHeight = 1.8;
-
-let johnMass = 63;
-
-let markBMI = markMass / markHeight^2
-let johnBMI = johnMass / johnHeight^2
-
-if (markBMI > johnBMI) {
-  console.log('Mark\'s BMI is higher than John\'s');
-} else {
-  console.log('John\'s BMI is higher than Mark\'s');
-}
+  console.log(firstName + ' is a man.');
+};
