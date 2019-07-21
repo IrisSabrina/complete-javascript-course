@@ -177,18 +177,73 @@
 // };
 
 /////////////////////
-// BOOLEAN LOGIC
+// BOOLEAN LOGIC vid # 15
 /////////////////////
 
-let firstName = 'John';
-let age = 20;
+// let firstName = 'John';
+// let age = 20;
+//
+// if (age < 13) {
+//   console.log(firstName + ' is a boy.');
+// } else if (age >= 13 && age < 20) { // Between 13 and 20 -- age >= 13 and age <20
+//   console.log(firstName + ' is a teenager.');
+// } else if (age >= 20 && age < 30) {
+//   console.log(firstName + ' is a young man.');
+// } else {
+//   console.log(firstName + ' is a man.');
+// };
 
-if (age < 13) {
-  console.log(firstName + ' is a boy.');
-} else if (age >= 13 && age < 20) { // Between 13 and 20 -- age >= 13 and age <20
-  console.log(firstName + ' is a teenager.');
-} else if (age >= 20 && age < 30) {
-  console.log(firstName + ' is a young man.');
-} else {
-  console.log(firstName + ' is a man.');
-};
+/////////////////////
+// Ternary Operators and Switch Statements vid # 16
+/////////////////////
+// A ternary operator has three parts called operands
+// it is an alternate way of writing an if statement
+let firstName = 'John';
+let age = 16;
+
+// ternary operator
+age >= 18 ? console.log(firstName + ' drinks beer.') : console.log(firstName + ' drinks juice.'); // the condition is first, the if block (after the ?) and the then which comes after the :
+
+let drink = age >= 18 ? 'beer' : 'juice';
+console.log(drink);
+
+// if we wrote the above as an if statement it would look like this:
+
+// if (age >= 18) {
+//   let drink = 'beer';
+// } else {
+//   let drink = 'juice';
+// }
+
+// Switch Statement
+let job = 'instructor';
+
+switch (job) {
+  case 'teacher':
+  case 'instructor':
+    console.log(firstName + ' teaches kids how to code.');
+    break; // this stops it from evaluating other cases if the job is true
+  case 'driver':
+    console.log(firstName + ' drives an uber in Lisbon.');
+    break;
+  case 'designer':
+    console.log(firstname + ' designs beautiful websites.');
+    break;
+  default:
+    console.log(firstName + ' does something else.'); // no break is needed because it is the end of the switch
+}
+
+age = 56;
+switch (true) {
+  case age < 13:
+    console.log(firstName + ' is a boy.');
+    break;
+  case age >= 13 && age < 20:
+    console.log(firstName + ' is a teenager.');
+    break;
+  case age >= 20 && age < 30:
+    console.log(firstName + ' is a young man.');
+    break;
+  default:
+    console.log(firstName + ' is a man.');
+}
