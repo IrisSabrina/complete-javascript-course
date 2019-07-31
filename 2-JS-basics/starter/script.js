@@ -254,12 +254,47 @@
 
 // falsy values: undefined, null, 0, '', NaN
 // truthy values: NOT falsy VALUES
-let height;
+// let height;
+//
+// height = 0;
+//
+// if (height || height === 0) {
+//   console.log('Variable is defined');
+// } else {
+//   console.log('Variable has NOT been defined');
+// }
+//
+// // Equality Operators
+// if (height === 23) {
+//   console.log('The == operator does type coercion!');
+// }
 
-height = 0;
+/////////////////////
+// CODING CHALLENGE 2
+/////////////////////
+//
+// let jTeamScore1 = 89;
+// let jTeamScore2 = 120;
+// let jTeamScore3 = 103;
+//
+// let mTeamScore1 = 116;
+// let mTeamScore2 = 94;
+// let mTeamScore3 = 123;
+//
+// let maryTeamScore1 = 97;
+// let maryTeamScore2 = 134;
+// let maryTeamScore3 = 105;
+//
+// let jTeamAverageScore = (jTeamScore1 + jTeamScore2 + jTeamScore3) / 3;
+// let mTeamAverageScore = (mTeamScore1 + mTeamScore2 + mTeamScore3) / 3;
+// let maryAverageTeamScore = (maryTeamScore1 + maryTeamScore2 + maryTeamScore3) / 3;
+//
+// if (jTeamAverageScore > mTeamAverageScore) {
+//   console.log('John\'s team has the highest average at ' + jTeamAverageScore + '!');
+// } else if (mTeamAverageScore > jTeamAverageScore) {
+//   console.log('Mark\'s team has the highest average at ' + mTeamAverageScore + '!');
+// } else {
+//   console.log('It\'s a draw!');
+// }
 
-if (height || height === 0) {
-  console.log('Variable is defined');
-} else {
-  console.log('Variable has NOT been defined');
-}
+// NOTE: I made this far too complicated. A cleaner solution is provided below
