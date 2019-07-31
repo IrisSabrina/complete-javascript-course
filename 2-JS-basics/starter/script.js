@@ -298,26 +298,67 @@
 // }
 
 // NOTE: I made this far too complicated. A cleaner solution is provided below
-
-let scoreJohn = (89 + 120 + 103) / 3;
-let scoreMike = (116 + 94 + 123) / 3;
-let scoreMary = (97 + 134 + 105) / 3;
-console.log(scoreJohn, scoreMike, scoreMary);
-
-// if (scoreJohn > scoreMike) {
+//
+// let scoreJohn = (89 + 120 + 103) / 3;
+// let scoreMike = (116 + 94 + 123) / 3;
+// let scoreMary = (97 + 134 + 105) / 3;
+// console.log(scoreJohn, scoreMike, scoreMary);
+//
+// // if (scoreJohn > scoreMike) {
+// //   console.log('John\'s team wins with ' + scoreJohn + ' points');
+// // } else if (scoreMike > scoreJohn) {
+// //   console.log('Mike\'s team wins with ' + scoreMike + ' points');
+// // } else {
+// //   console.log('There is a draw');
+// // }
+//
+// if (scoreJohn > scoreMike && scoreJohn > scoreMary) {
 //   console.log('John\'s team wins with ' + scoreJohn + ' points');
-// } else if (scoreMike > scoreJohn) {
+// } else if (scoreMike > scoreJohn && scoreMike > scoreMary) {
 //   console.log('Mike\'s team wins with ' + scoreMike + ' points');
+// } else if (scoreMary > scoreJohn && scoreMary > scoreMike) {
+//   console.log('Mary\'s team wins with ' + scoreMary + ' points');
 // } else {
 //   console.log('There is a draw');
 // }
 
-if (scoreJohn > scoreMike && scoreJohn > scoreMary) {
-  console.log('John\'s team wins with ' + scoreJohn + ' points');
-} else if (scoreMike > scoreJohn && scoreMike > scoreMary) {
-  console.log('Mike\'s team wins with ' + scoreMike + ' points');
-} else if (scoreMary > scoreJohn && scoreMary > scoreMike) {
-  console.log('Mary\'s team wins with ' + scoreMary + ' points');
-} else {
-  console.log('There is a draw');
-}
+/////////////////////
+// FUNCTIONS
+/////////////////////
+
+// Functions are containers that hold cold. We can pass arguments into them to return the result we're looking for.
+
+// birthYear is the argument that is passed through. It could be named anything, but semantic naming works best.
+//
+// function calculateAge(birthYear) {
+//   return 2018 - birthYear;
+// }
+//
+// // When calculateAge is called, whatever is put in the parens here, 1990, gets passed as the birthYear VALUE in the calculateAge function.
+// calculateAge(1990);
+//
+// // use ageJohn to contain the result of calculateAge so that you can log it to see the actual calculation.
+// let ageJohn = calculateAge(1990);
+// let ageMike = calculateAge(1948);
+// let ageJane = calculateAge(1969);
+// console.log(ageJohn, ageMike, ageJane);
+//
+// // the function below is calling another FUNCTIONS
+// function yearsUntilRetirement(yearOfBirth, firstName) {
+//   let age = calculateAge(yearOfBirth);
+//   let retirement = 65 - age;
+//
+//   if (retirement > 0) {
+//     console.log(firstName + ' retires in ' + retirement + ' years');
+//   } else {
+//   console.log(firstName + ' is already retired.');
+//   }
+// }
+//
+// yearsUntilRetirement(1990, 'John');
+// yearsUntilRetirement(1948, 'Mike');
+// yearsUntilRetirement(1969, 'Jane');
+
+/////////////////////
+// FUNCTION STATEMENTS & EXPRESSIONS vid 21
+/////////////////////
