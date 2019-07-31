@@ -385,3 +385,48 @@
 // console.log(whatDoYouDo('retired', 'Mark'));
 
 // Javascript expressions always return a value. If it results in a value, it is an expression
+
+// ///////////////////
+// ARRAYS vid 22
+// ///////////////////
+//
+// // arrays are like collections of variables or elements. they can also contain different data types
+// // arrays are 0 based. meaning the first element is element 0, the next element 1, and so on.
+//
+// // initialize new array
+// let names = ['John', 'Mark', 'Jane'];
+// let years = new Array(1990, 1969, 1948);
+//
+// console.log(names[0]); // returns John
+// console.log(names); // returns ["John", "Mark", "Jane"]
+// console.log(names.length); // returns 3
+//
+// // Mutating array data
+// names[1] = 'Ben';
+// names[5] = 'Mary'; // returns ["John", "Ben", "Jane", empty × 2, "Mary"]
+// // names[names.length] = 'Mary'; // this will add Mary as the last element in the array
+// console.log(names); // returns ["John", "Ben", "Jane"] it changed position 1 to Ben
+//
+// // Different data Types
+// let john = ['John', 'Smith', 1990, 'teacher', false];
+//
+// // the .push method adds an element to the end of the array
+// // the .unshift method adds an element to the beginning of the array
+// john.push('blue');
+// john.unshift('Mr.');
+// console.log(john);
+//
+// john.pop()
+// john.shift();
+// console.log(john); // .pop removed 'blue' from the end of the array and .shift removed 'Mr.' from the beginning of the array
+//
+// console.log(john.indexOf(1990)); // returned 2 as the index position
+// // console.log(john.indexOf(23)); // returned -1 because it is not an item in the array
+//
+// // Use a ternary operator to determine if John is a designer
+// let isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
+// console.log(isDesigner);
+
+/////////////////////
+// CODE CHALLENGE 3
+/////////////////////
