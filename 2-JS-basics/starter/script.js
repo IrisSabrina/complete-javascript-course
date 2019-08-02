@@ -430,3 +430,23 @@
 /////////////////////
 // CODE CHALLENGE 3
 /////////////////////
+
+let bills = [124, 48, 268]
+
+
+function calculateTip(mealTicket){
+  let tip = calculateTip(bills);
+  if (mealTicket < 50){
+    tip = .20;
+  } else if (mealTicket > 50 && mealTicket < 200){
+    tip = .15;
+  } else if (mealTicket > 200){
+    tip = .10;
+  } else {
+    console.log('Can not calculate.');
+  }
+  return tip * mealTicket;
+};
+
+
+calculateTip(bills);
