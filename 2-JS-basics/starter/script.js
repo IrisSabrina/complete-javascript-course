@@ -431,22 +431,47 @@
 // CODE CHALLENGE 3
 /////////////////////
 
-let bills = [124, 48, 268]
+// let bills = [124, 48, 268]
+//
+//
+// function calculateTip(mealTicket){
+//   let tip = calculateTip(mealTicket);
+//   if (mealTicket < 50){
+//     tip = .20;
+//   } else if (mealTicket >= 50 && mealTicket < 200){
+//     tip = .15;
+//   } else if (mealTicket > 200){
+//     tip = .10;
+//   } else {
+//     console.log('Can not calculate.');
+//   }
+//   return tip * mealTicket;
+// };
+//
+// calculateTip(bills); // got a call stack exceeds maximum value error. This did not work.
 
+// SOLUTION
 
-function calculateTip(mealTicket){
-  let tip = calculateTip(bills);
-  if (mealTicket < 50){
-    tip = .20;
-  } else if (mealTicket > 50 && mealTicket < 200){
-    tip = .15;
-  } else if (mealTicket > 200){
-    tip = .10;
+function calculateTip(bill) {
+  let percentage;
+  if (bill < 50) {
+    percentage = .2;
+  } else if (bill >= 50 && bill < 200) {
+    percentage = .15;
   } else {
-    console.log('Can not calculate.');
+    percentage = .1;
   }
-  return tip * mealTicket;
-};
+  return percentage * bill;
+}
 
+console.log(calculateTip(100));
 
-calculateTip(bills);
+let bills = [124, 48, 268];
+let tips = [calculateTip(bills[0]),
+            calculateTip(bills[1]),
+            calculateTip(bills[2])];
+let finalValues = [bills[0] + tips[0],
+                   bills[1] + tips[1],
+                   bills[2] + tips[2]];
+
+console.log(tips, finalValues);
