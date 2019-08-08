@@ -452,26 +452,63 @@
 
 // SOLUTION
 
-function calculateTip(bill) {
-  let percentage;
-  if (bill < 50) {
-    percentage = .2;
-  } else if (bill >= 50 && bill < 200) {
-    percentage = .15;
-  } else {
-    percentage = .1;
-  }
-  return percentage * bill;
+// function calculateTip(bill) {
+//   let percentage;
+//   if (bill < 50) {
+//     percentage = .2;
+//   } else if (bill >= 50 && bill < 200) {
+//     percentage = .15;
+//   } else {
+//     percentage = .1;
+//   }
+//   return percentage * bill;
+// }
+//
+// console.log(calculateTip(100));
+//
+// let bills = [124, 48, 268];
+// let tips = [calculateTip(bills[0]),
+//             calculateTip(bills[1]),
+//             calculateTip(bills[2])];
+// let finalValues = [bills[0] + tips[0],
+//                    bills[1] + tips[1],
+//                    bills[2] + tips[2]];
+//
+// console.log(tips, finalValues);
+
+/////////////////////
+// OBJECTS & PROPERTIES vid #25
+/////////////////////
+
+// Objects contain key/value pairs. This allows you to name items that are in the array of the object. An object literal is a container that holds the key value pairs and is denoted with curly braces {}
+
+// firstName is a property of the object john
+// Object literal
+let john = {
+  firstName: 'John',
+  lastName: 'Smith',
+  birthYear: 1990,
+  family: ['Jane', 'Mark', 'Bob', 'Emily'],
+  job: 'teacher',
+  isMarried: false
 }
 
-console.log(calculateTip(100));
+console.log(john);
+// if you want to read the key of the value firstName use . notation as seen below
+console.log(john.firstName); // returns John
+// if you want to see an item in an array contained within an object use brackets as seen below
+console.log(john['lastName']); // returns Smith
+let x = 'birthYear';
+console.log(john[x]); // returns 1990
 
-let bills = [124, 48, 268];
-let tips = [calculateTip(bills[0]),
-            calculateTip(bills[1]),
-            calculateTip(bills[2])];
-let finalValues = [bills[0] + tips[0],
-                   bills[1] + tips[1],
-                   bills[2] + tips[2]];
+// you can use . notation and brackets to mutate the original data as well
+john.job = 'designer';
+john['isMarried'] = true;
+console.log(john);
 
-console.log(tips, finalValues);
+// new Object syntax
+let jane = new Object();
+jane.name = 'Jane';
+jane.birthYear = 1969;
+jane['lastName'] = 'Smith';
+console.log(jane);
