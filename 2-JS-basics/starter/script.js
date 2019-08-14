@@ -484,31 +484,50 @@
 
 // firstName is a property of the object john
 // Object literal
+// let john = {
+//   firstName: 'John',
+//   lastName: 'Smith',
+//   birthYear: 1990,
+//   family: ['Jane', 'Mark', 'Bob', 'Emily'],
+//   job: 'teacher',
+//   isMarried: false
+// }
+//
+// console.log(john);
+// // if you want to read the key of the value firstName use . notation as seen below
+// console.log(john.firstName); // returns John
+// // if you want to see an item in an array contained within an object use brackets as seen below
+// console.log(john['lastName']); // returns Smith
+// let x = 'birthYear';
+// console.log(john[x]); // returns 1990
+//
+// // you can use . notation and brackets to mutate the original data as well
+// john.job = 'designer';
+// john['isMarried'] = true;
+// console.log(john);
+//
+// // new Object syntax
+// let jane = new Object();
+// jane.name = 'Jane';
+// jane.birthYear = 1969;
+// jane['lastName'] = 'Smith';
+// console.log(jane);
+
+/////////////////////
+// OBJECTS & METHODS vid #26
+/////////////////////
+
 let john = {
   firstName: 'John',
   lastName: 'Smith',
   birthYear: 1990,
   family: ['Jane', 'Mark', 'Bob', 'Emily'],
   job: 'teacher',
-  isMarried: false
-}
+  isMarried: false,
+  calcAge: function(birthYear) {
+    this.age = 2018 - this.birthYear;
+  }
+}; // this in this context means John. So the "this" is referencing john.birthYear basically
 
+john.calcAge();
 console.log(john);
-// if you want to read the key of the value firstName use . notation as seen below
-console.log(john.firstName); // returns John
-// if you want to see an item in an array contained within an object use brackets as seen below
-console.log(john['lastName']); // returns Smith
-let x = 'birthYear';
-console.log(john[x]); // returns 1990
-
-// you can use . notation and brackets to mutate the original data as well
-john.job = 'designer';
-john['isMarried'] = true;
-console.log(john);
-
-// new Object syntax
-let jane = new Object();
-jane.name = 'Jane';
-jane.birthYear = 1969;
-jane['lastName'] = 'Smith';
-console.log(jane);
