@@ -537,29 +537,33 @@
 /////////////////////
 
 let mark = {
+  fullName: "Mark Miller",
   height: 1.9,
   mass: 75,
   calcBMI: function() {
     this.bmi = this.mass / this.height^2
+    return this.bmi;
   }
 }
 
-// mark.calcBMI();
-// console.log(mark);
+mark.calcBMI();
+console.log(mark);
 
 let john = {
+  fullName: "John Smith",
   height: 1.8,
   mass: 63,
   calcBMI: function() {
     this.bmi = this.mass / this.height^2
+    return this.bmi;
   }
 }
 
-// john.calcBMI();
-// console.log(john);
+john.calcBMI();
+console.log(john);
 
 function higherBMI () {
-  if (mark.calcBMI > john.calcBMI) {
+  if (mark.bmi > john.bmi) {
     return "Mark has the higher BMI."
   } else {
     return "John has the higher BMI."
@@ -569,16 +573,11 @@ function higherBMI () {
 higherBMI();
 console.log(higherBMI());
 
-// let johnHeight = 1.8;
-//
-// let johnMass = 63;
-//
-// let markBMI = markMass / markHeight^2
-// let johnBMI = johnMass / johnHeight^2
-//
-// console.log(markBMI); // returned 33
-// console.log(johnBMI);
-//
-// let higherBMI = markBMI > johnBMI
-//
-// console.log('Is Mark\'s BMI highter than John\'s? ' + higherBMI);
+// TEACHER'S solution
+if (john.bmi > mark.bmi) {
+  console.log(john.fullName + ' has a higher BMI than ' + mark.fullName);
+} else if (mark.bmi > john.bmi) {
+  console.log(mark.fullName + ' has a higher BMI than ' + john.fullName);
+} else {
+  console.log(mark.fullName + ' and ' + john.fullName + " have the same BMI.");
+}
