@@ -517,17 +517,68 @@
 // OBJECTS & METHODS vid #26
 /////////////////////
 
-let john = {
-  firstName: 'John',
-  lastName: 'Smith',
-  birthYear: 1990,
-  family: ['Jane', 'Mark', 'Bob', 'Emily'],
-  job: 'teacher',
-  isMarried: false,
-  calcAge: function(birthYear) {
-    this.age = 2018 - this.birthYear;
-  }
-}; // this in this context means John. So the "this" is referencing john.birthYear basically
+// let john = {
+//   firstName: 'John',
+//   lastName: 'Smith',
+//   birthYear: 1990,
+//   family: ['Jane', 'Mark', 'Bob', 'Emily'],
+//   job: 'teacher',
+//   isMarried: false,
+//   calcAge: function(birthYear) {
+//     this.age = 2018 - this.birthYear;
+//   }
+// }; // this in this context means John. So the "this" is referencing john.birthYear basically
+//
+// john.calcAge();
+// console.log(john);
 
-john.calcAge();
-console.log(john);
+/////////////////////
+// CODE CHALLENGE #4
+/////////////////////
+
+let mark = {
+  height: 1.9,
+  mass: 75,
+  calcBMI: function() {
+    this.bmi = this.mass / this.height^2
+  }
+}
+
+// mark.calcBMI();
+// console.log(mark);
+
+let john = {
+  height: 1.8,
+  mass: 63,
+  calcBMI: function() {
+    this.bmi = this.mass / this.height^2
+  }
+}
+
+// john.calcBMI();
+// console.log(john);
+
+function higherBMI () {
+  if (mark.calcBMI > john.calcBMI) {
+    return "Mark has the higher BMI."
+  } else {
+    return "John has the higher BMI."
+  }
+}
+
+higherBMI();
+console.log(higherBMI());
+
+// let johnHeight = 1.8;
+//
+// let johnMass = 63;
+//
+// let markBMI = markMass / markHeight^2
+// let johnBMI = johnMass / johnHeight^2
+//
+// console.log(markBMI); // returned 33
+// console.log(johnBMI);
+//
+// let higherBMI = markBMI > johnBMI
+//
+// console.log('Is Mark\'s BMI highter than John\'s? ' + higherBMI);
